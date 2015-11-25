@@ -23,7 +23,7 @@ function ModelsMgr() {
                 temp_name = e.split('.')[0];
                 temp_path = dir.substr(init_dir_len).replaceAll('\\\\', '/');
                 parent_dir && (temp_name = temp_path + '/' + temp_name);
-                (!parent_dir) && (temp_name = '/');
+                (!parent_dir) && (temp_name = '/' + temp_name);
                 files.push({file: _path.join(dir, '/', e), name: temp_name});
             });
         };
